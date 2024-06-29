@@ -1,0 +1,52 @@
+.all {
+  margin: 25px;
+  display: flex;
+  justify-content: center;
+}
+.container {
+  width: 90%;
+}
+.header {
+  color: var(--principal);
+}
+.header h1 {
+  font-weight: lighter;
+}
+.header span {
+  font-weight: bold;
+}
+mat-stepper {
+  width: 90%;
+}
+.example-radio-group {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+  align-items: flex-start;
+}
+
+.example-radio-button {
+  margin: 5px;
+}
+button {
+  margin: 1rem;
+}
+.next {
+  background-color: var(--principal);
+  color: var(--wall);
+}
+.back {
+  background-color: var(--wall);
+  color: var(--principal);
+}
+.adress{
+  display: flex;
+  margin: 25px;
+}
+.adress button{
+  background-color: var(--principal);
+  color: var(--wall);
+}
+.adress mat-form-field{
+  font-size: 16px;
+}

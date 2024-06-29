@@ -1,0 +1,93 @@
+.body{ 
+    margin: 3rem;
+    min-height: 100vh;
+}
+.header{
+    margin-bottom: 20px;
+}
+.header h1{
+    font-weight: bold;
+    color: var(--principal);
+    margin-bottom: 0;
+}
+.header .details{
+    display:  flex;
+    font-size: 18px;
+    justify-content: space-between;
+    color: var(--principal);
+}
+.header .details mat-hint{
+    color: var(--principal);
+}
+.list mat-card{
+    padding: 0;;
+    width: 100%;
+    height: 150px;
+    margin-bottom: 25px;
+    background-color: var(--wall);
+}
+.list .elements{
+    display: flex;
+}
+.list mat-card img{
+   width: 250px;
+   height: 150px;
+   object-fit: cover;
+   object-position: center;
+}
+.list .elements .specs{
+    margin: 20px;
+}
+.list .elements .specs .price{
+    align-self: flex-end;
+}
+.purchase{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.purchase button{
+    background-color: var(--principal);
+    color: var(--wall);
+}
+.prod{
+    display: flex;
+    justify-content: space-between;
+}
+.actions{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+.actions .delete
+{
+    cursor: pointer;
+}
+.actions .quantity a{
+    background-color: var(--principal);
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 3px;
+    color: var(--wall);
+    border: solid 2px var(--principal)
+}
+.actions .quantity
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.quantity p{
+    margin-top: 10px;
+    font-weight: bold;
+}
+.actions a{
+    color: var(--principal);
+    font-size: 20px;
+    margin: 20px;
+}

@@ -1,0 +1,39 @@
+
+.store{
+    margin-bottom: 3rem;
+}
+.heading h1{
+    color: var(--principal);
+    font-weight: lighter;
+}
+.heading{
+    margin-top: 2rem;
+    margin-left: 0rem;
+
+}
+.linea{
+    border-top: 1px solid var(--principal);
+    height: 2px;
+    padding: 0;
+    margin-left: 0rem;
+    margin-right: 12rem;
+    margin-top: -0.5rem;
+    margin-bottom: 1.5rem;
+}
+.up{
+    display: flex;
+    justify-content: space-between;
+}
+.up h1{
+    font-weight: lighter;
+}
+.up .actions{
+    margin-right: 12rem;
+}
+.up .actions button{
+    margin-bottom: 0.5rem;
+    margin-left: 0.5rem;
+    font-size: smaller;
+    background-color: var(--principal);
+    color: var(--wall);
+}

@@ -1,0 +1,29 @@
+<body>
+    <div class="row">
+        <div class="left">
+            <app-navbar-logsign></app-navbar-logsign>
+            <div class="container">
+                <h1>Iniciar Sesión</h1>
+                <form [formGroup]="myForm" autocomplete="off">  
+                    <mat-form-field appearance="legacy">
+                        <mat-label>Email</mat-label>
+                        <input matInput formControlName="email" placeholder="Email">
+                    </mat-form-field> <br>
+
+                    <mat-form-field appearance="legacy">
+                        <mat-label>Contraseña</mat-label>
+                        <input matInput type="password" formControlName="password" placeholder="Contraseña">
+                    
+                    </mat-form-field> <br>
+                </form>
+            
+                <button mat-raised-button style="background-color: var(--principal); color: var(--wall);" (click)="loginUser()">Ingresar</button>
+            
+                <p>	¿Aún no tiene una cuenta? <a routerLink="/signup"> Regístrese</a>
+            </div>
+        </div>
+        <div class="right"></div>
+    </div>
+</body>
+
+<!--routerLink="/signup"-->

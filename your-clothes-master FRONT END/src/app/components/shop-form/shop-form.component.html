@@ -1,0 +1,88 @@
+<body>
+  <div class="row">
+      <div class="left">
+          <app-global-navbar></app-global-navbar>
+          <div class="container">
+              <h1 *ngIf="!shopid">Crear una tienda</h1>
+              <h1 *ngIf="shopid">Editar una tienda</h1>
+              <form [formGroup]="myForm"> 
+
+                  <mat-form-field appearance="legacy">
+                      <mat-label>Nombre</mat-label>
+                      <input matInput formControlName="name" placeholder="Nombre" [ngClass]="{
+                          'is-invalid':f('name')?.invalid,
+                          'is-valid': f('name')?.valid
+                        }">
+                  </mat-form-field> <br>
+                  <div *ngIf="myForm.get('name')?.errors && myForm.get('name')?.touched">
+                    <span style="color:red">
+                      <ng-container *ngIf="myForm.get('name')?.hasError('required')">El campo es obligatorio</ng-container>
+                      <ng-container *ngIf="myForm.get('name')?.hasError('maxlength')">Supero limite de cantidad de palabras, disminuya</ng-container>
+                      <ng-container *ngIf="myForm.get('name')?.hasError('pattern')">Solo palabras</ng-container>
+                    </span>
+                  </div>
+
+                  <mat-form-field appearance="legacy">
+                      <mat-label>Teléfono</mat-label>
+                      <input matInput formControlName="phone" placeholder="Teléfono" [ngClass]="{
+                          'is-invalid':f('phone')?.invalid,
+                          'is-valid': f('phone')?.valid
+                        }">
+                  </mat-form-field> <br>
+                  <div *ngIf="myForm.get('phone')?.errors && myForm.get('phone')?.touched">
+                    <span style="color:red">
+                      <ng-container *ngIf="myForm.get('phone')?.hasError('required')">El campo es obligatorio</ng-container>
+                      <ng-container *ngIf="myForm.get('phone')?.hasError('maxlength')">Supero limite de cantidad de numeros, disminuya</ng-container>
+                      <ng-container *ngIf="myForm.get('phone')?.hasError('minlength')">Campo incompleto</ng-container>
+                      <ng-container *ngIf="myForm.get('phone')?.hasError('pattern')">Solo numeros</ng-container>
+                    </span>
+                  </div>
+
+                  <mat-form-field appearance="legacy">
+                      <mat-label>Dirección</mat-label>
+                      <input matInput formControlName="adress" placeholder="Dirección" [ngClass]="{
+                          'is-invalid':f('adress')?.invalid,
+                          'is-valid': f('adress')?.valid
+                        }">
+                  </mat-form-field> <br>
+                  <div *ngIf="myForm.get('adress')?.errors && myForm.get('adress')?.touched">
+                    <span style="color:red">
+                      <ng-container *ngIf="myForm.get('adress')?.hasError('required')">El campo es obligatorio</ng-container>
+                      <ng-container *ngIf="myForm.get('adress')?.hasError('maxlength')">Supero limite de cantidad de numeros, disminuya</ng-container>
+                      <ng-container *ngIf="myForm.get('adress')?.hasError('pattern')">Implemente lo necesario para su lugar</ng-container>
+                    </span>
+                  </div>
+
+                  <mat-form-field appearance="legacy">
+                      <mat-label>Descripción</mat-label>
+                      <textarea matInput formControlName="description" [ngClass]="{
+                          'is-invalid':f('description')?.invalid,
+                          'is-valid': f('description')?.valid
+                        }"></textarea>
+                    </mat-form-field>
+                    <div *ngIf="myForm.get('description')?.errors && myForm.get('description')?.touched">
+                      <span style="color:red">
+                        <ng-container *ngIf="myForm.get('description')?.hasError('required')">El campo es obligatorio</ng-container>
+                        <ng-container *ngIf="myForm.get('description')?.hasError('maxlength')">Supero limite de cantidad de palabras, disminuya</ng-container>
+                        <ng-container *ngIf="myForm.get('description')?.hasError('pattern')">Solo letras</ng-container>
+                      </span>
+                    </div>
+
+                   <div
+                   *ngIf="myForm.get('description')?.hasError('maxlength')"
+                   >
+                     <span class="mda-form-msg" style="color:red"> * Este campo maximo tiene 200 caracteres </span>
+                   </div>
+              </form>
+              <div class="actions">
+                  <div class="save">
+                      <button mat-raised-button (click)="saveShop()"> Guardar</button>
+                  </div>
+                  <div class="cancel">
+                      <button mat-raised-button routerLink="/user/{{id}}"> Cancelar</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</body>

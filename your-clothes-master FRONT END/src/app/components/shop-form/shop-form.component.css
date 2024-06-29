@@ -1,0 +1,49 @@
+.container{
+    width: 1000px;
+    margin-left: 4rem;
+    margin-top: 2rem;
+}
+.container h1{
+    color: var(--principal);
+    font-weight: bold;
+}
+form mat-form-field{
+    margin-top: 1rem;
+    width: 25rem;
+    font-size: medium;
+}
+.actions{
+    display: flex;
+}
+.actions .save button{
+    background-color: var(--principal);
+    color: var(--wall);
+}
+.actions .cancel button{
+    background-color: var(--wall);
+    color: var(--principal);
+}
+.actions button{
+    margin-right: 1rem;
+    color: var(--principal);
+}
+
+::ng-deep .mat-focused .mat-form-field-label {
+    /*change color of label*/
+    color: var(--principallight) !important;
+}
+::ng-deep .mat-form-field-label {
+    /*change color of label*/
+    color: var(--principallight) !important;
+} 
+::ng-deep.mat-form-field-underline {
+    /*change color of underline*/
+    background-color: var(--principallight) !important;
+} 
+::ng-deep.mat-form-field-ripple {
+   /*change color of underline when focused*/
+   background-color: var(--principallight) !important;
+}
+::ng-deep .mat-input-element::placeholder{
+    color: var(--principallight) !important;
+}

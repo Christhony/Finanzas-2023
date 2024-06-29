@@ -1,0 +1,24 @@
+
+<app-global-navbar [userID] = "iduser"></app-global-navbar>
+
+<div class="body">
+    <div class="header">
+        <h1>Bienvenido a sus recibos, <span>{{myuser.name}}</span></h1>
+    </div>
+    <div class="receipts">
+        <div *ngFor="let order of myorders">
+            <mat-card class="order" routerLink="/orders/{{order.id}}/{{iduser}}">
+                <h3>{{order.orderdate.getDate()}}/{{order.orderdate.getMonth()+1}}/{{order.orderdate.getFullYear()}}</h3>
+                <div class="row">
+                    <p>Productos: {{order.quantityproducts}}</p>
+                    <p>Total pagado: {{order.totalpaid}}</p>
+                </div>
+                <div class="row">
+                    <p>{{order.shippingmethod}}</p>
+                    <p>{{order.adress_shipping}}</p>
+                </div>
+            </mat-card>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

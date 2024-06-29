@@ -1,0 +1,16 @@
+<mat-toolbar>
+    <h1 routerLink="/main-page/{{userID}}">Your<span>Clothes</span></h1>
+    <nav>
+        <a *ngIf="userID" class="fa-solid fa-magnifying-glass" routerLink="/products-page/{{userID}}"></a>
+        <a *ngIf="user && userID" class="fas fa-shopping-cart" routerLink="/shopping-cart/{{user.name}}/{{userID}}"></a>
+        <a *ngIf="shopUser" class="fa-solid fa-shop" routerLink="/shop-page/{{shopUser.name}}/{{userID}}"></a>
+        <a *ngIf="user && userID" class="fa-solid fa-receipt" routerLink="/my-orders/{{userID}}"></a>
+        <a *ngIf="userID" routerLink="/user/{{userID}}"> <span class="fa-solid fa-user" ></span> Mi cuenta</a>
+        <button mat-button class="menu-button" [routerLink]="['/']" aria-hidden="false">
+            <span class="imagen">
+                <mat-icon>exit_to_app</mat-icon>
+            </span>
+        </button>
+    </nav>
+</mat-toolbar>
+

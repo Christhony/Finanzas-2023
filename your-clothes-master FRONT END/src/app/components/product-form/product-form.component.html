@@ -1,0 +1,219 @@
+<body>
+    <app-global-navbar [userID]="user.id"></app-global-navbar>
+
+    <div class="form">
+        
+        <div class="heading">
+            <h1>Agregar producto a <span>{{shopname}}</span> </h1>
+        </div>
+
+        <div class="linea"></div>
+
+        <div class="content">
+            <div class="formProduct">
+                <div class="form-content">
+                    <form [formGroup]="myForm" autocomplete="off" color="secondary">
+        
+                        <mat-form-field appearance="legacy">
+                            <mat-label>Nombre del producto</mat-label>
+                            <input matInput formControlName="name" placeholder="Nombre del producto" [ngClass]="{
+                                'is-invalid':f('name')?.invalid,
+                                'is-valid': f('name')?.valid
+                              }">
+                        </mat-form-field>
+                        <div *ngIf="myForm.get('name')?.hasError('required') && myForm.get('name')?.touched">
+                            <span style="color:red"> Este campo es obligatorio</span>
+                         </div>
+                         <div
+                         *ngIf="myForm.get('name')?.hasError('maxlength')"
+                         >
+                           <span class="mda-form-msg" style="color:red"> * Este campo maximo tiene 50 caracteres </span>
+                         </div>
+
+                        <div class="model3">
+                            <mat-form-field appearance="legacy">
+                                <mat-label>Cantidad</mat-label>
+                                <input matInput formControlName="quantity" placeholder="Cantidad" maxlength="100" [ngClass]="{
+                                    'is-invalid':f('quantity')?.invalid,
+                                    'is-valid': f('quantity')?.valid
+                                  }">
+                            </mat-form-field>
+
+                            <div *ngIf="myForm.get('quantity')?.hasError('required') && myForm.get('quantity')?.touched">
+                                <span style="color:red"> Este campo es obligatorio</span>
+                             </div>
+
+                           <div *ngIf="myForm.get('quantity')?.hasError('pattern') && myForm.get('quantity')?.touched">
+                                <span style="color:red"> Este campo debe de ser de 0 a 100</span>
+                           </div>
+
+                            <mat-form-field appearance="legacy">
+                                <mat-label>Precio</mat-label>
+                                <input matInput formControlName="price" placeholder="Precio" maxlength="4" [ngClass]="{
+                                    'is-invalid':f('price')?.invalid,
+                                    'is-valid': f('price')?.valid
+                                  }">
+                            </mat-form-field>
+
+                           <div *ngIf="myForm.get('price')?.hasError('pattern') && myForm.get('price')?.touched">
+                                <span style="color:red"> Este campo debe ser del 1 al 1000</span>
+                           </div>
+                            <div *ngIf="myForm.get('price')?.hasError('required') && myForm.get('price')?.touched">
+                                <span style="color:red"> Este campo es obligatorio</span>
+                             </div>
+                             <mat-form-field appearance = "legacy">
+                                <mat-label>Tipo de precio</mat-label>
+                                <mat-select formControlName = "pricetype">
+                                    <mat-option *ngFor="let pricetype of pricetypes" [value]="pricetype.name">
+                                        {{pricetype.name}}
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                            </div>
+
+                        <div *ngIf="myForm.get('pricetype')?.hasError('required')&& myForm.get('pricetype')?.touched">
+                            <span style="color: red">Este campo es obligatorio</span>
+                            </div>
+
+                        <mat-form-field appearance="legacy">
+                            <mat-label>Marca</mat-label>
+                            <input matInput formControlName="brand" placeholder="Marca" [ngClass]="{
+                                'is-invalid':f('brand')?.invalid,
+                                'is-valid': f('brand')?.valid
+                              }">
+                        </mat-form-field> <br>
+                        <div *ngIf="myForm.get('brand')?.hasError('required') && myForm.get('brand')?.touched">
+                            <span style="color:red"> Este campo es obligatorio</span>
+                         </div>
+                         <div
+                         *ngIf="myForm.get('brand')?.hasError('maxlength')"
+                         >
+                           <span class="mda-form-msg" style="color:red"> * Este campo maximo tiene 50 caracteres </span>
+                         </div>
+
+                        <div class="model2">
+                            <mat-form-field appearance = "legacy">
+                                <mat-label>Género</mat-label>
+                                <mat-select formControlName = "gender" [ngClass]="{
+                                    'is-invalid':f('gender')?.invalid,
+                                    'is-valid': f('gender')?.valid
+                                  }">
+                                    <mat-option *ngFor="let gender of genders" [value]="gender.name">
+                                        {{gender.name}}
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                            <div *ngIf="myForm.get('gender')?.hasError('required') && myForm.get('gender')?.touched">
+                                <span style="color:red"> Este campo es obligatorio</span>
+                             </div>
+                    
+                            <mat-form-field appearance = "legacy">
+                                <mat-label>Tipo de prenda</mat-label>
+                                <mat-select formControlName = "type" [ngClass]="{
+                                    'is-invalid':f('type')?.invalid,
+                                    'is-valid': f('type')?.valid
+                                  }">
+                                    <mat-option *ngFor="let type of types" [value]="type.name">
+                                        {{type.name}}
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                            <div *ngIf="myForm.get('type')?.hasError('required') && myForm.get('type')?.touched">
+                                <span style="color:red"> Este campo es obligatorio</span>
+                             </div>
+                        </div>
+                
+                        <div class="model2">
+                            <mat-form-field appearance = "legacy">
+                                <mat-label>Material</mat-label>
+                                <mat-select formControlName = "material" [ngClass]="{
+                                    'is-invalid':f('material')?.invalid,
+                                    'is-valid': f('material')?.valid
+                                  }">
+                                    <mat-option *ngFor="let material of materials" [value]="material.name">
+                                        {{material.name}}
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                            <div *ngIf="myForm.get('material')?.hasError('required') && myForm.get('material')?.touched">
+                                <span style="color:red"> Este campo es obligatorio</span>
+                             </div>
+                    
+                            <mat-form-field appearance = "legacy">
+                                <mat-label>Talla</mat-label>
+                                <mat-select formControlName = "size" [ngClass]="{
+                                    'is-invalid':f('size')?.invalid,
+                                    'is-valid': f('size')?.valid
+                                  }">
+                                    <mat-option *ngFor="let size of sizes" [value]="size.name">
+                                        {{size.name}}
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                            <div *ngIf="myForm.get('size')?.hasError('required') && myForm.get('size')?.touched">
+                                <span style="color:red"> Este campo es obligatorio</span>
+                             </div>
+                        </div>
+                
+                        <div class="model2">
+                            <mat-form-field appearance = "legacy">
+                                <mat-label>Temporada</mat-label>
+                                <mat-select formControlName = "season" [ngClass]="{
+                                    'is-invalid':f('season')?.invalid,
+                                    'is-valid': f('season')?.valid
+                                  }">
+                                    <mat-option *ngFor="let season of seasons" [value]="season.name">
+                                        {{season.name}}
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                            <div *ngIf="myForm.get('season')?.hasError('required') && myForm.get('season')?.touched">
+                                <span style="color:red"> Este campo es obligatorio</span>
+                             </div>
+                    
+                            <mat-form-field appearance="legacy">
+                                <mat-label>Año</mat-label>
+                                <input matInput formControlName="year" placeholder="Año" [ngClass]="{
+                                    'is-invalid':f('year')?.invalid,
+                                    'is-valid': f('year')?.valid
+                                  }">
+                            </mat-form-field>
+                            <div *ngIf="myForm.get('year')?.hasError('required') && myForm.get('year')?.touched">
+                                <span style="color:red"> Este campo es obligatorio</span>
+                             </div>
+                             <div *ngIf="myForm.get('year')?.hasError('maxlength') && myForm.get('year')?.touched">
+                                <span style="color:red"> Este campo debe ser del 2000 al 2023 </span>
+                           </div>
+                           
+                           <div *ngIf="myForm.get('year')?.hasError('pattern') && myForm.get('year')?.touched">
+                                <span style="color:red"> Este campo debe ser del 2000 al 2023 </span>
+                           </div>
+                        </div>
+                    </form>
+                </div>
+        
+                <div class="actions">
+                    <div class="save">
+                        <button *ngIf="!verifyProduct()" mat-raised-button (click)="saveProduct()" >Agregar producto</button>
+                        <button *ngIf="verifyProduct()" mat-raised-button (click)="saveProduct()" >Guardar cambios</button>
+                    </div>
+                    <div class="cancel" *ngIf="shopfound">
+                        <button mat-raised-button (click)="back()" >Cancelar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="image">
+                <button mat-raised-button class="contenedor-btn-file">
+                    <i class="fas fa-file"></i>
+                    Agregar Imagen
+                    <label for="btn-file"></label>
+                    <input (change)="capturefile($event)" type="file" id="btn-file">
+                </button>
+                <div *ngIf="preview" class="preview">
+                    <img [src]="preview" alt="">
+                </div>
+            </div>  
+        </div>
+    </div>
+
+</body>

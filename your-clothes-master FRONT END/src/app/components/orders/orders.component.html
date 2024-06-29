@@ -1,0 +1,38 @@
+<app-global-navbar [userID] = "iduser"></app-global-navbar>
+<div class="body">
+    <div class="receipt">
+        <h2>RECIBO DE PAGO</h2>
+        <div class="line"></div>
+        <div *ngIf="user" class="order-details">
+            <p> USUARIO: {{user.name}} {{user.lastname}}</p>
+            <p>{{date}}</p>
+        </div>
+        <div class="line"></div>
+        <div class="product-details">
+            <h3>Item</h3>
+            <h3>Producto</h3>
+            <h3>Cantidad</h3>
+            <h3>Precio</h3>
+        </div>
+        <div *ngFor="let prod of myallorder; let i = index">
+            <div class="product-details">
+                <p>{{i+1}}</p>
+                <p>{{prod.product}}</p>
+                <p>{{prod.quantity}}</p>
+                <p>S/.{{prod.totalprice}}</p>
+            </div>
+        </div>
+        <div class="line"></div>
+        <div *ngIf="my_order" class="min-details">
+            <p>CANTIDAD DE PRODUCTOS: {{my_order.quantityproducts}}</p>
+            <p>TOTAL PAGADO: S/.{{my_order.totalpaid}}</p>
+        </div>
+        <div class="actions">
+            <button mat-raised-button routerLink="/main-page/{{iduser}}" >Ir al inicio</button>
+            <button mat-raised-button routerLink="/my-orders/{{iduser}}">Revisar todos mis recibos</button>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>
+
+

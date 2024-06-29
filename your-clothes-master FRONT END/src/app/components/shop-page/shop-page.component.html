@@ -1,0 +1,36 @@
+<app-global-navbar [userID]="id"></app-global-navbar>
+
+<div class="body">
+    <div class="heading" *ngIf="userfound">
+        <div class="up" *ngIf="shopfound">
+            <h1>{{shopfound.name}}</h1>
+            <div class="actions">
+                <button (click)="deleteStore()" *ngIf="userVerification()" style="background-color: var(--wall); color: var(--principal); font-weight: bold;" mat-raised-button>Eliminar</button>
+                <button *ngIf="userVerification()" mat-raised-button routerLink="/shop-edit/{{shopfound.id}}" >Editar tienda</button>
+                <button *ngIf="userVerification()" mat-raised-button routerLink="/product-form/{{shopfound.name}}" >Agregar productos</button>
+                <button *ngIf="userVerification()" mat-raised-button (click)="export()" >Exportar productos</button>
+                <button *ngIf="!userVerification()" mat-raised-button>Realizar reseña</button>
+            </div>
+        </div>
+        <div class="linea"></div>
+        <mat-hint>por {{userfound.name}}</mat-hint>
+    </div>
+    
+    <div class="products">
+        <div class="list">
+            <h2>Productos Disponibles</h2>
+            <app-show-products [productslist]="available" [quantity]="available.length" [iduser]="id" [shoppage]="true" ></app-show-products>
+        </div> 
+        <div class="list" *ngIf="soldout.length > 0">
+            <h2>Productos Agotados</h2>
+            <app-show-products [productslist]="soldout" [quantity]="soldout.length" [iduser]="id" [shoppage]="true"></app-show-products>
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>
+
+
+
+
+

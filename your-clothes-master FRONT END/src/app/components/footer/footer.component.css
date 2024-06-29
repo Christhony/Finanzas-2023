@@ -1,0 +1,28 @@
+footer{
+    display: flex;
+    background-color: var(--principal);
+    color: var(--wall);
+    height: 90px;
+    align-items: center;
+    justify-content: center;
+}
+.container
+{
+    margin: 25px;
+}
+.container a{
+    font-size: 25px;
+    margin: 10px;
+    padding: 10px;
+}
+.social{
+    display: flex;
+    justify-content: center;
+}
+.container a:hover{
+    background-color: var(--wall);
+    color: var(--principal);
+    border-radius: 3px;
+    cursor: pointer;
+
+}

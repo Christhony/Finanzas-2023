@@ -1,0 +1,38 @@
+.body{
+    padding: 30px;
+    min-height: 100vh;
+}
+.receipts{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.order{
+    width: 270px;
+    height: 125px;
+    overflow: hidden;
+    padding: 10px;
+    margin: 10px;
+    margin-bottom: 15px;
+    background-color: var(--wall);
+    border: solid 2px var(--principal);
+    cursor: pointer;
+}
+.order:hover{
+  text-decoration: underline;
+}
+.order .row{
+  display: flex;
+  margin: 10px;
+  justify-content: space-between;
+}
+.header {
+    color: var(--principal);
+    margin-bottom: 2rem;
+  }
+  .header h1 {
+    font-weight: lighter;
+  }
+  .header span {
+    font-weight: bold;
+  }

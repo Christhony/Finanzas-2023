@@ -1,0 +1,49 @@
+.body
+{
+    margin: 50px;
+    height: 100vh;
+}
+.line {
+    border-top: 1px solid var(--principal);
+    margin-top: -0.7rem;
+}
+.receipt
+{
+    width: 100%;
+}
+.order-details{
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+.product-details{
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr;
+    margin: 5px;
+    padding-bottom: 10px;
+}
+.product-details p{
+    margin: 0.5rem;
+    text-transform: uppercase;
+}
+.product-details h3{
+    margin: 0.5rem;
+    margin-bottom: -15px;
+    text-transform: uppercase;
+}
+.min-details{
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem;
+}
+.actions{
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+.actions button{
+    background-color: var(--principal);
+    color: var(--wall);
+}

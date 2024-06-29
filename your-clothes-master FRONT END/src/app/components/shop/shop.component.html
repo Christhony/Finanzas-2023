@@ -1,0 +1,22 @@
+<div class="store">
+  <div class="heading">
+    <div class="up">
+        <h1>Tienda del usuario</h1>
+        <div class="actions">
+          <button *ngIf="shopUser" mat-raised-button routerLink="/shop-page/{{shopUser.name}}/{{UseriD}}">Ver mi tienda</button>
+          <button *ngIf="!shopUser" mat-raised-button routerLink="/shop-create/{{UseriD}}">Crear Tienda</button>
+        </div>
+    </div>
+    <div class="linea"></div>
+  </div>
+  <div class="content">
+    <div class="mode-1" *ngIf="shopUser">
+      <h5 *ngIf="shopUser.name">Nombre de la tienda: <span>{{shopUser.name}}</span></h5>
+      <h5 *ngIf="shopUser.adress">Dirección: <span>{{shopUser.adress}}</span></h5>
+      <h5 *ngIf="shopUser.phone">Teléfono: <span>{{shopUser.phone}}</span></h5>
+    </div>
+    <div class="mode-2" *ngIf="!shopUser">
+      <h5>Aún no tiene una tienda.</h5>
+    </div>
+  </div>
+</div>

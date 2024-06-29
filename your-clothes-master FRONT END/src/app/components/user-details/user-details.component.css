@@ -1,0 +1,71 @@
+.body
+{
+    min-height: 100vh;
+}
+.heading h1{
+    margin-bottom: 0rem;
+}
+.heading{
+
+    color: var(--principal);
+    margin: 2rem 3rem;
+    font-weight: lighter;
+
+}
+.linea{
+    border-top: 1px solid var(--principallight);
+    height: 2px;
+    padding: 0;
+    margin-left: 0rem;
+    margin-right: 2rem;
+}
+.up{
+    display: flex;
+    justify-content: space-between;
+}
+.up h1{
+    font-weight: lighter;
+}
+.up mat-hint{
+    color: var(--principal);
+    font-weight: lighter;
+}
+.up .actions{
+    margin-right: 2rem;
+}
+.up .actions button{
+    margin-bottom: 0.5rem;
+    margin-left: 0.5rem;
+    font-size: smaller;
+    background-color: #2c3646;
+    color: #f5e2d0;
+    font-weight: lighter;
+}
+
+.content .row{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.content .row .img img{
+    margin-top: 1rem;
+    margin-left: 4.5rem;
+    width: 500px;
+    border-radius: 3%;
+}
+.content .row .details{
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+.content .row .details .title h1{
+    color: var(--principal);
+    font-weight: lighter;
+}
+.content .row .details .linea{
+    border-top: 1px solid var(--principal);
+    height: 2px;
+    padding: 0;
+    margin-left: 0rem;
+    margin-right: 12rem;
+    margin-top: -0.5rem;
+    margin-bottom: 1rem;
+}

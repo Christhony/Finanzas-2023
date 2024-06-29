@@ -1,0 +1,852 @@
+{
+  "users": [
+    {
+      "id": 2,
+      "name": "José",
+      "lastname": "Montes",
+      "email": "j@gmail.com",
+      "password": "josesito",
+      "dni": 0,
+      "phone": 0,
+      "adress": "Av. Jardines 172"
+    },
+    {
+      "id": 7,
+      "name": "Mario",
+      "lastname": "bros",
+      "email": "m@gmail.com",
+      "dni": 0,
+      "phone": 0,
+      "adress": "Con la princesa Peach",
+      "password": "mario"
+    },
+    {
+      "id": 8,
+      "name": "Mario",
+      "lastname": "Bros",
+      "email": "itsmario@gmail.com",
+      "password": "mario",
+      "dni": 0,
+      "phone": 0,
+      "adress": ""
+    },
+    {
+      "id": 9,
+      "name": "Finn",
+      "lastname": "theHuman",
+      "email": "finn@gmail.com",
+      "dni": "2424",
+      "phone": "123456789",
+      "adress": "Land of Ooo",
+      "password": "finn"
+    },
+    {
+      "id": 10,
+      "name": "Julio",
+      "lastname": "Iglesias",
+      "email": "julito@gmail.com",
+      "password": "julito",
+      "dni": 0,
+      "phone": 0,
+      "adress": ""
+    },
+    {
+      "id": 11,
+      "name": "María",
+      "lastname": "La del barrio",
+      "email": "maria@gmail.com",
+      "dni": "123",
+      "phone": "2523",
+      "adress": "Jr. Barrios",
+      "password": "maria"
+    },
+    {
+      "id": 12,
+      "name": "New",
+      "lastname": "New",
+      "email": "new@gmail.com",
+      "password": "12345",
+      "dni": 0,
+      "phone": 0,
+      "adress": ""
+    },
+    {
+      "id": 13,
+      "name": "Lionel",
+      "lastname": "Messi",
+      "email": "messi10@gmail.com",
+      "password": "messi",
+      "dni": 0,
+      "phone": 0,
+      "adress": ""
+    },
+    {
+      "id": 14,
+      "name": "Gabriel",
+      "lastname": "García Márquez",
+      "email": "garcia@gmail.com",
+      "password": "garcia",
+      "dni": 0,
+      "phone": 0,
+      "adress": ""
+    },
+    {
+      "id": 15,
+      "name": "willy",
+      "lastname": "salas",
+      "email": "s@gmail.com",
+      "password": "s",
+      "dni": 0,
+      "phone": 0,
+      "adress": ""
+    },
+    {
+      "id": 16,
+      "name": "f",
+      "lastname": "f",
+      "email": "f@gmail.com",
+      "password": "f",
+      "dni": 0,
+      "phone": 0,
+      "adress": ""
+    }
+  ],
+  "shops": [
+    {
+      "id": 1,
+      "idUser": 7,
+      "name": "HOYNOFIO",
+      "phone": "13515",
+      "adress": "sdgg",
+      "Descripción": "dsgdsgs",
+      "amountProducts": 0,
+      "Aceptación": 0
+    },
+    {
+      "id": 3,
+      "idUser": 2,
+      "name": "Mario World",
+      "phone": "352",
+      "adress": "Castillo de Luiggi",
+      "Descripción": "si",
+      "amountProducts": 0,
+      "Aceptación": 0
+    },
+    {
+      "id": 4,
+      "idUser": 10,
+      "name": "Church Store",
+      "phone": "135235",
+      "adress": "a la vuelta",
+      "Descripción": "buena tienda:)",
+      "amountProducts": 0,
+      "Aceptación": 0
+    },
+    {
+      "id": 5,
+      "idUser": 11,
+      "name": "Barrio Store",
+      "phone": "876543234",
+      "adress": "Barrio-3 (cambio de dirección)",
+      "Descripción": "buen servicio :)",
+      "amountProducts": 0,
+      "Aceptación": 0
+    }
+  ],
+  "products": [
+    {
+      "id": 8,
+      "idShop": 1,
+      "name": "Pantalon verde",
+      "shopname": "HOYNOFIO",
+      "pubdate": "2022-10-14T01:34:08.718Z",
+      "condition": "Agotado",
+      "quantity": 0,
+      "price": "200",
+      "gender": "Hombre",
+      "size": "S",
+      "material": "Seda",
+      "brand": "Pionier",
+      "type": "Pantalón",
+      "season": "Invierno",
+      "year": "2020",
+      "pricetype": "Normal"
+    },
+    {
+      "id": 11,
+      "idShop": 3,
+      "name": "Casaca gris",
+      "shopname": "Mario World",
+      "pubdate": "2022-10-05T23:38:04.024Z",
+      "condition": "Disponible",
+      "quantity": "1",
+      "price": "200",
+      "gender": "Hombre",
+      "size": "M",
+      "material": "Cuero",
+      "brand": "Cueritos",
+      "type": "Casaca",
+      "season": "Invierno",
+      "year": "2023",
+      "image": ""
+    },
+    {
+      "id": 12,
+      "idShop": 4,
+      "name": "Vestido Puntos Azul",
+      "shopname": "Church Store",
+      "pubdate": "2022-10-05T23:53:02.701Z",
+      "condition": "Disponible",
+      "quantity": "1",
+      "price": "150",
+      "gender": "Mujer",
+      "size": "M",
+      "material": "Seda",
+      "brand": "Dresser",
+      "type": "Otro",
+      "season": "Invierno",
+      "year": "2020"
+    },
+    {
+      "id": 13,
+      "idShop": 3,
+      "name": "Casaca marrón",
+      "shopname": "Mario World",
+      "pubdate": "2022-10-10T03:08:51.238Z",
+      "condition": "Disponible",
+      "quantity": 1,
+      "price": "345",
+      "gender": "Mujer",
+      "size": "M",
+      "material": "Cuero",
+      "brand": "Ice cream",
+      "type": "Casaca",
+      "season": "Invierno",
+      "year": "2021",
+      "pricetype": "Oferta"
+    },
+    {
+      "id": 14,
+      "idShop": 3,
+      "name": "Camiseta azul",
+      "shopname": "Mario World",
+      "pubdate": "2022-10-13T02:45:56.821Z",
+      "condition": "Agotado",
+      "quantity": 0,
+      "price": "325",
+      "gender": "Hombre",
+      "size": "M",
+      "material": "Poliéster",
+      "brand": "Adidas",
+      "type": "Camiseta",
+      "season": "Primavera",
+      "year": "2020",
+      "pricetype": "Oferta"
+    },
+    {
+      "id": 15,
+      "idShop": 3,
+      "name": "Gorro Negro",
+      "shopname": "Mario World",
+      "pubdate": "2022-10-13T03:43:24.782Z",
+      "condition": "Agotado",
+      "quantity": 0,
+      "price": "50",
+      "gender": "Ambos",
+      "size": "M",
+      "material": "Nylon",
+      "brand": "Hats",
+      "type": "Otro",
+      "season": "Invierno",
+      "year": "2018",
+      "pricetype": "Oferta"
+    },
+    {
+      "id": 16,
+      "idShop": 3,
+      "name": "Pantalones Rojos",
+      "shopname": "Mario World",
+      "pubdate": "2022-10-25T05:42:47.183Z",
+      "condition": "Disponible",
+      "quantity": 5,
+      "price": "200",
+      "gender": "Mujer",
+      "size": "M",
+      "material": "Algodón",
+      "brand": "Pants",
+      "type": "Pantalón",
+      "season": "Otoño",
+      "year": "2020"
+    },
+    {
+      "id": 17,
+      "idShop": 3,
+      "name": "Camisa Jean",
+      "shopname": "Mario World",
+      "pubdate": "2022-10-21T00:52:25.785Z",
+      "condition": "Agotado",
+      "quantity": -2,
+      "price": "100",
+      "gender": "Hombre",
+      "size": "M",
+      "material": "Lana",
+      "brand": "Jugues",
+      "type": "Camisa",
+      "season": "Otoño",
+      "year": "2021"
+    },
+    {
+      "id": 18,
+      "idShop": 3,
+      "name": "Polo blanco",
+      "shopname": "Mario World",
+      "pubdate": "2022-10-08T05:05:14.315Z",
+      "condition": "Disponible",
+      "quantity": 1,
+      "price": "80",
+      "gender": "Mujer",
+      "size": "M",
+      "material": "Lana",
+      "brand": "Whites",
+      "type": "Camiseta",
+      "season": "Verano",
+      "year": "2019",
+      "pricetype": "Normal"
+    },
+    {
+      "id": 19,
+      "idShop": 3,
+      "name": "Pantalón blanco",
+      "shopname": "Mario World",
+      "pubdate": "2022-10-06T21:19:53.159Z",
+      "condition": "Disponible",
+      "quantity": "1",
+      "price": "150",
+      "gender": "Mujer",
+      "size": "S",
+      "material": "Poliéster",
+      "brand": "Whites",
+      "type": "Pantalón",
+      "season": "Verano",
+      "year": "2021",
+      "pricetype": "Normal"
+    },
+    {
+      "id": 20,
+      "idShop": 3,
+      "name": "Vestido verde",
+      "shopname": "Mario World",
+      "pubdate": "2022-10-06T21:05:31.616Z",
+      "condition": "Disponible",
+      "quantity": "1",
+      "price": "130",
+      "gender": "Mujer",
+      "size": "M",
+      "material": "Algodón",
+      "brand": "Black",
+      "type": "Otro",
+      "season": "Verano",
+      "year": "2019",
+      "pricetype": "Normal"
+    },
+    {
+      "id": 21,
+      "idShop": 3,
+      "name": "Casaca verde",
+      "shopname": "Mario World",
+      "pubdate": "2022-10-08T04:30:10.392Z",
+      "condition": "Disponible",
+      "quantity": 1,
+      "price": "140",
+      "gender": "Hombre",
+      "size": "XL",
+      "material": "Algodón",
+      "brand": "Green",
+      "type": "Casaca",
+      "season": "Invierno",
+      "year": "2022",
+      "pricetype": "Normal"
+    },
+    {
+      "id": 22,
+      "idShop": 3,
+      "name": "Saco Azul",
+      "shopname": "Mario World",
+      "pubdate": "2022-10-08T03:26:11.864Z",
+      "condition": "Disponible",
+      "quantity": 1,
+      "price": "250",
+      "gender": "Hombre",
+      "size": "M",
+      "material": "Lana",
+      "brand": "Now",
+      "type": "Otro",
+      "season": "Otoño",
+      "year": "2021",
+      "pricetype": "Normal"
+    },
+    {
+      "id": 23,
+      "idShop": 3,
+      "name": "Casaca Beige",
+      "shopname": "Mario World",
+      "pubdate": "2022-10-13T03:43:32.072Z",
+      "condition": "Agotado",
+      "quantity": 0,
+      "price": "150",
+      "gender": "Mujer",
+      "size": "M",
+      "material": "Algodón",
+      "brand": "Clothes",
+      "type": "Casaca",
+      "season": "Invierno",
+      "year": "2019",
+      "pricetype": "Oferta"
+    },
+    {
+      "id": 24,
+      "idShop": 3,
+      "name": "Chompa colores",
+      "shopname": "Mario World",
+      "pubdate": "2022-10-08T03:32:34.440Z",
+      "condition": "Disponible",
+      "quantity": 1,
+      "price": "80",
+      "gender": "Mujer",
+      "size": "S",
+      "material": "Lana",
+      "brand": "Sweater",
+      "type": "Chompa",
+      "season": "Invierno",
+      "year": "2018",
+      "pricetype": "Normal"
+    },
+    {
+      "id": 26,
+      "idShop": 3,
+      "name": "Vestido Multicolor",
+      "shopname": "Mario World",
+      "pubdate": "2022-10-13T03:43:18.848Z",
+      "condition": "Agotado",
+      "quantity": 0,
+      "price": "120",
+      "gender": "Mujer",
+      "size": "M",
+      "material": "Algodón",
+      "brand": "Dresses",
+      "type": "Otro",
+      "season": "Invierno",
+      "year": "2019",
+      "pricetype": "Normal"
+    },
+    {
+      "id": 27,
+      "idShop": 1,
+      "name": "Saco celeste",
+      "shopname": "HOYNOFIO",
+      "pubdate": "2022-10-13T03:04:58.256Z",
+      "condition": "Agotado",
+      "quantity": 0,
+      "price": "80",
+      "gender": "Mujer",
+      "size": "S",
+      "material": "Algodón",
+      "brand": "Fall",
+      "type": "Otro",
+      "season": "Invierno",
+      "year": "2016",
+      "pricetype": "Normal"
+    },
+    {
+      "id": 28,
+      "idShop": 1,
+      "name": "Vestido negro",
+      "shopname": "HOYNOFIO",
+      "pubdate": "2022-10-13T03:05:05.255Z",
+      "condition": "Agotado",
+      "quantity": 0,
+      "price": "100",
+      "gender": "Mujer",
+      "size": "S",
+      "material": "Algodón",
+      "brand": "Black",
+      "type": "Otro",
+      "season": "Primavera",
+      "year": "2018",
+      "pricetype": "Normal"
+    },
+    {
+      "id": 29,
+      "idShop": 5,
+      "name": "Chaleco beige",
+      "shopname": "Barrio Store",
+      "pubdate": "2022-10-14T19:07:35.592Z",
+      "condition": "Disponible",
+      "quantity": 1,
+      "price": "250",
+      "gender": "Hombre",
+      "size": "M",
+      "material": "Seda",
+      "brand": "Beiges",
+      "type": "Casaca",
+      "season": "Invierno",
+      "year": "2020",
+      "pricetype": "Normal"
+    }
+  ],
+  "genders": [
+    {
+      "id": 1,
+      "name": "Hombre"
+    },
+    {
+      "id": 2,
+      "name": "Mujer"
+    },
+    {
+      "id": 3,
+      "name": "Ambos"
+    },
+    {
+      "id": 4,
+      "name": "Niños"
+    }
+  ],
+  "conditions": [
+    {
+      "id": 1,
+      "name": "Disponible"
+    },
+    {
+      "id": 2,
+      "name": "Agotado"
+    }
+  ],
+  "sizes": [
+    {
+      "id": 1,
+      "name": "XS"
+    },
+    {
+      "id": 2,
+      "name": "S"
+    },
+    {
+      "id": 3,
+      "name": "M"
+    },
+    {
+      "id": 4,
+      "name": "L"
+    },
+    {
+      "id": 5,
+      "name": "XL"
+    },
+    {
+      "id": 6,
+      "name": "XLL"
+    }
+  ],
+  "materials": [
+    {
+      "id": 1,
+      "name": "Algodón"
+    },
+    {
+      "id": 2,
+      "name": "Poliéster"
+    },
+    {
+      "id": 3,
+      "name": "Lino"
+    },
+    {
+      "id": 4,
+      "name": "Lana"
+    },
+    {
+      "id": 5,
+      "name": "Seda"
+    },
+    {
+      "id": 6,
+      "name": "Nylon"
+    },
+    {
+      "id": 7,
+      "name": "Lycra"
+    },
+    {
+      "id": 8,
+      "name": "Cuero"
+    }
+  ],
+  "types": [
+    {
+      "id": 1,
+      "name": "Casaca"
+    },
+    {
+      "id": 2,
+      "name": "Pantalón"
+    },
+    {
+      "id": 3,
+      "name": "Camiseta"
+    },
+    {
+      "id": 4,
+      "name": "Short"
+    },
+    {
+      "id": 5,
+      "name": "Zapatilla"
+    },
+    {
+      "id": 6,
+      "name": "Camisa"
+    },
+    {
+      "id": 7,
+      "name": "Chompa"
+    },
+    {
+      "id": 8,
+      "name": "Otro"
+    }
+  ],
+  "seasons": [
+    {
+      "id": 1,
+      "name": "Verano"
+    },
+    {
+      "id": 2,
+      "name": "Invierno"
+    },
+    {
+      "id": 3,
+      "name": "Otoño"
+    },
+    {
+      "id": 4,
+      "name": "Primavera"
+    }
+  ],
+  "pricetype": [
+    {
+      "id": 1,
+      "type": "En oferta"
+    },
+    {
+      "id": 2,
+      "type": "Estado Normal"
+    }
+  ],
+  "cartxproduct": [
+    {
+      "id": 6,
+      "product_id": 16,
+      "shopcart_id": 7,
+      "quantity": 2
+    },
+    {
+      "id": 7,
+      "product_id": 13,
+      "shopcart_id": 7,
+      "quantity": 1
+    }
+  ],
+  "shoppingcarts": [
+    {
+      "id": 1,
+      "id_user": 13,
+      "total_purchase": 0,
+      "quantity_products": 0
+    },
+    {
+      "id": 2,
+      "id_user": 2,
+      "total_purchase": 0,
+      "quantity_products": 0
+    },
+    {
+      "id": 3,
+      "id_user": 7,
+      "total_purchase": 0,
+      "quantity_products": 0
+    },
+    {
+      "id": 4,
+      "id_user": 8,
+      "total_purchase": 0,
+      "quantity_products": 0
+    },
+    {
+      "id": 5,
+      "id_user": 9,
+      "total_purchase": 0,
+      "quantity_products": 0
+    },
+    {
+      "id": 6,
+      "id_user": 10,
+      "total_purchase": 0,
+      "quantity_products": 0
+    },
+    {
+      "id": 7,
+      "id_user": 11,
+      "total_purchase": 745,
+      "quantity_products": 3
+    },
+    {
+      "id": 8,
+      "id_user": 12,
+      "total_purchase": 0,
+      "quantity_products": 0
+    },
+    {
+      "id": 9,
+      "id_user": 12,
+      "total_purchase": 0,
+      "quantity_products": 0
+    },
+    {
+      "id": 10,
+      "id_user": 15,
+      "total_purchase": 0,
+      "quantity_products": 0
+    },
+    {
+      "id": 11,
+      "id_user": 16,
+      "total_purchase": 0,
+      "quantity_products": 0
+    }
+  ],
+  "shippings": [
+    {
+      "id": 1,
+      "name": "Envío a domicilio"
+    },
+    {
+      "id": 2,
+      "name": "Recojo en tienda"
+    }
+  ],
+  "payments": [
+    {
+      "id": 1,
+      "name": "Pago en efectivo"
+    },
+    {
+      "id": 2,
+      "name": "Pago con tarjeta de crédito"
+    }
+  ],
+  "orderproducts": [
+    {
+      "id": 1,
+      "id_order": 1,
+      "id_product": 15,
+      "id_shop": 3,
+      "product": "Gorro Negro M Hats Ambos",
+      "quantity": 1,
+      "totalprice": 50
+    },
+    {
+      "id": 2,
+      "id_order": 1,
+      "id_product": 23,
+      "id_shop": 3,
+      "product": "Casaca Beige M Clothes Mujer",
+      "quantity": 1,
+      "totalprice": 150
+    },
+    {
+      "id": 3,
+      "id_order": 1,
+      "id_product": 26,
+      "id_shop": 3,
+      "product": "Vestido Multicolor M Dresses Mujer",
+      "quantity": 1,
+      "totalprice": 120
+    },
+    {
+      "id": 4,
+      "id_order": 2,
+      "id_product": 17,
+      "id_shop": 3,
+      "product": "Camisa Jean M Jugues Hombre",
+      "quantity": 4,
+      "totalprice": 400
+    },
+    {
+      "id": 5,
+      "id_order": 3,
+      "id_product": 17,
+      "id_shop": 3,
+      "product": "Camisa Jean M Jugues Hombre",
+      "quantity": 3,
+      "totalprice": 300
+    },
+    {
+      "id": 6,
+      "id_order": 4,
+      "id_product": 16,
+      "id_shop": 3,
+      "product": "Pantalones Rojos M Pants Mujer",
+      "quantity": 5,
+      "totalprice": 1000
+    }
+  ],
+  "orderpayments": [
+    {
+      "id": 1,
+      "id_user": "11",
+      "user_name": "María",
+      "shippingmethod": "Envío a domicilio",
+      "adress_shipping": "Jr. Barrios",
+      "paymentmethod": "Pago en efectivo",
+      "quantityproducts": 3,
+      "orderdate": "2022-10-14T19:40:21.789Z",
+      "totalpaid": 320
+    },
+    {
+      "id": 2,
+      "id_user": "11",
+      "user_name": "María",
+      "shippingmethod": "Envío a domicilio",
+      "adress_shipping": "Jr. Barrios",
+      "paymentmethod": "Pago con tarjeta de crédito",
+      "quantityproducts": 3,
+      "orderdate": "2022-10-25T05:39:17.599Z",
+      "totalpaid": 300
+    },
+    {
+      "id": 3,
+      "id_user": "11",
+      "user_name": "María",
+      "shippingmethod": "Recojo en tienda",
+      "adress_shipping": "No se seleccionó delivery",
+      "paymentmethod": "Pago con tarjeta de crédito",
+      "quantityproducts": 4,
+      "orderdate": "2022-10-25T05:40:56.941Z",
+      "totalpaid": 400
+    },
+    {
+      "id": 4,
+      "id_user": "11",
+      "user_name": "María",
+      "shippingmethod": "Recojo en tienda",
+      "adress_shipping": "No se seleccionó delivery",
+      "paymentmethod": "Pago con tarjeta de crédito",
+      "quantityproducts": 5,
+      "orderdate": "2022-10-25T05:45:26.259Z",
+      "totalpaid": 1000
+    }
+  ],
+  "prodimages": []
+}

@@ -1,0 +1,48 @@
+<body>
+    <app-global-navbar [userID] = "id"></app-global-navbar>
+    <div class="main">
+        <div class="products">
+            <div class="title">
+                <h1>Productos de <span>Oferta</span></h1>
+            </div>
+            <div class="offers">
+                <div *ngFor="let offer of offersprod" class="card" routerLink="/product-details/{{offer.shopname}}/{{offer.id}}/{{id}}">
+                    <a class="container">
+                        <div *ngFor="let image of images" class="image">
+                            <div *ngIf="image.id_product == offer.id">
+                                <div class="description" style="background-image: url({{image.img}}); background-size: cover; background-position: center;">
+                                    <div class="details">
+                                        <div class="one">
+                                            <mat-hint style="font-weight: bold;" >{{offer.brand}}</mat-hint> <br>
+                                            <h4 style="text-transform: uppercase; font-size: medium;">{{offer.name}}</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+               
+            </div>
+            
+        </div>
+        <div class="products">
+            <div class="title">
+                <h1>Nuestros <span>Productos</span></h1>
+            </div>
+            <app-show-products [productslist]="products" [quantity]=amountProducts(products) [iduser]="id"></app-show-products>
+        </div>
+        <div class="products">
+            <div class="title">
+                <h1>Productos de <span>Invierno</span></h1>
+            </div>
+            <app-show-products [productslist]="winterProd" [quantity]=amountProducts(winterProd) [iduser]="id"></app-show-products>
+        </div>
+    </div>
+    <app-footer></app-footer>
+</body>
+
+
+
+
+

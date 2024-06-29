@@ -1,0 +1,51 @@
+<app-global-navbar [userID]="iduser"></app-global-navbar>
+<div class="product-page">
+    <div class="backarrow">
+        <a class="fas fa-caret-square-left" (click)="back()" style="cursor: pointer;"></a>
+    </div>
+    <div class="image">
+        <img *ngIf="img" src="{{img}}" alt="">
+    </div>
+    <div class="content">
+        <div class="up" *ngIf="product">
+            <mat-hint> {{product.brand}} </mat-hint>
+            <h1>{{product.name}}</h1>
+        </div>
+        <div class="linea"></div>
+        <div class="mod">
+            <mat-hint *ngIf="shop">vendido por {{shop.name}}</mat-hint>
+        </div>
+        <div class="details" *ngIf="product">
+            <div class="specs">
+                <p>Talla: <span>{{product.size}}</span> </p>
+                <p>Género: <span>{{product.gender}}</span> </p>
+                <p>Temporada: <span>{{product.season}}</span> </p>
+                <p>Material: <span>{{product.material}}</span> </p>
+                <div class="price">
+                    <span>{{product.pricetype}}</span>
+                    <h1>S/.{{product.price}}</h1>
+                </div>
+            </div>
+            <div class="actions">
+                <div class="client">
+                    <div *ngIf="!added">
+                        <button mat-raised-button  *ngIf="!userVerification() && !soldoout()" (click)="addtoCart(product.id)">Agregar al Carrito</button>
+                    </div>
+                    <div *ngIf="added">
+                        <button mat-raised-button *ngIf="!userVerification()" (click)="deletecart()">Eliminar del carrito</button>
+                    </div>
+                    <div *ngIf="soldoout()" class="warn">
+                        <p mat-raised-button *ngIf="!userVerification()">Agotado</p>
+                    </div>
+                </div>
+                <div class="owner">
+                    <button mat-raised-button  *ngIf="userVerification()" routerLink="/product-edit/{{shopname}}/{{product.id}}" > Editar Producto </button>
+                    <button mat-raised-button  *ngIf="userVerification()" (click)="workingdelete()" >Eliminar producto de mi tienda</button>
+                </div>
+            </div>
+        </div> 
+    </div>
+</div>
+<app-footer></app-footer>
+
+

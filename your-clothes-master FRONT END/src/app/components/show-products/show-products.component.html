@@ -1,0 +1,53 @@
+<body>
+    <div class="all">
+        <div class="filter" *ngIf="filters">
+            <h3>Precios</h3>
+            <div class="checkbox" *ngFor="let pricetype of pricetypes">
+                <mat-checkbox (change)="pricetypefilter($event)" value="{{pricetype.name}}">{{pricetype.name}}</mat-checkbox>
+            </div>
+            <h3>Géneros</h3>
+            <div class="checkbox" *ngFor="let gender of genders">
+                <mat-checkbox (change)="genderFilter($event)" value="{{gender.name}}">{{gender.name}}</mat-checkbox>
+            </div>
+            <h3>Temporadas</h3>
+            <div class="checkbox" *ngFor="let season of seasons">
+                <mat-checkbox (change)="seasonfilter($event)" value="{{season.name}}">{{season.name}}</mat-checkbox>
+            </div>
+            <h3>Tallas</h3>
+            <div class="checkbox" *ngFor="let size of sizes">
+                <mat-checkbox (change)="sizefilter($event)" value="{{size.name}}">{{size.name}}</mat-checkbox>
+            </div>
+        </div>
+        <div class="complete">
+            <div class="list">
+                <div *ngFor="let product of products" class="card">
+                    <div routerLink="/product-details/{{product.shopname}}/{{product.id}}/{{iduser}}">
+                        <a class="container">
+                            <div *ngFor="let image of imgs" class="image">
+                                <img *ngIf="image.id_product == product.id" src="{{image.img}}" alt="">
+                            </div>
+                            <div class="description">
+        
+                                <mat-hint>{{product.brand}}</mat-hint> <br>
+                                <h4>{{product.name}}</h4>
+                            </div>
+                            <div class="price">
+                                <p *ngIf="product.condition == 'Agotado'">{{product.condition}}</p> <br>
+                                <strong>S/.{{product.price}}</strong>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="products.length > 12">
+                <div class="paginator" *ngIf="filters || shoppage">
+                    <button mat-raised-button class="previous" (click)="previous()" [disabled]="pagenow ==1">Anterior</button>
+                    <div class="number">
+                        <h1>{{pagenow}}</h1>
+                    </div>
+                    <button mat-raised-button class="next" (click)="next()" [disabled]="pagenow ==pages || pages == 0">Siguiente</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

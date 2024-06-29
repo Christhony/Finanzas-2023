@@ -1,0 +1,89 @@
+<app-global-navbar [userID] = "user_id"></app-global-navbar>
+<div class="body">
+    <div class="header" *ngIf="user && mycart">
+        <div class="details">
+            <div class="user">
+                <h1>Carrito de compras</h1>
+                <p>de {{user.name}}</p>
+            </div>
+            <div class="data">
+                <p>Cantidad de productos: <strong>{{mycart.quantity_products}}</strong></p>
+                <p>Total: <strong>S/.{{mycart.total_purchase}}</strong></p>
+            </div>
+        </div>
+    </div>
+    <div class="header">
+    </div>
+    <div class="list" *ngFor="let product of products">
+        <mat-card class="product">
+            <div class="prod">
+                <div class="elements">
+                    <div *ngFor="let img of images">
+                        <img *ngIf="img.id_product == product.id" src="{{img.img}}" alt="">
+                    </div>
+                    <div class="specs">
+                        <mat-hint>{{product.brand}}</mat-hint>
+                        <p>{{product.name}}</p>
+                        <div class="price">
+                            <strong>S/.{{product.price}}</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="actions">
+                    <div class="delete">
+                        <a class="fa fa-trash" (click)="deleteprod(product.id)"></a>
+                    </div>
+                    <div *ngFor="let myprod of products_cart">
+                        <div *ngIf="myprod.product_id == product.id" class="quantity">
+                            <a *ngIf="myprod.quantity!=1; else Minus"  class="fa-solid fa-minus" (click)="Decrease(myprod.id)"></a>
+                            <ng-template #Minus class="template">
+                                <a style="background-color: var(--wall); color: var(--principal); cursor:not-allowed; " class="fa-solid fa-minus"></a>
+                            </ng-template>
+                            <p>{{myprod.quantity}}</p>
+                            <a *ngIf="product.quantity > myprod.quantity; else Plus" class="fa-solid fa-plus" (click)="Increase(myprod.id)"></a>
+                            <ng-template #Plus class="template">
+                                <a style="background-color: var(--wall); color: var(--principal); cursor:not-allowed" class="fa-solid fa-plus"></a>
+                            </ng-template>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </mat-card>
+    </div>
+        
+    <div class="purchase" *ngIf="mycart">
+        <button *ngIf="products.length != 0" mat-raised-button routerLink="/purchase/{{user_name}}/{{mycart.id}}/{{user_id}}">Pagar productos</button>
+        <p *ngIf="products.length == 0">Agregue productos al carrito.</p>
+    </div>
+
+    <div class="header">
+        <h1>Mis productos agotados</h1>
+    </div>
+    <div class="list" *ngFor="let product of soldout">
+        <mat-card class="product">
+            <div class="prod">
+                <div class="elements">
+                    <div *ngFor="let img of images">
+                        <img *ngIf="img.id_product == product.id" src="{{img.img}}" alt="">
+                    </div>
+                    <div class="specs">
+                        <mat-hint>{{product.brand}}</mat-hint>
+                        <p>{{product.name}}</p>
+                        <div class="price">
+                            <strong>S/.{{product.price}}</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="actions">
+                    <div class="delete">
+                        <a class="fa fa-trash" (click)="deleteprod(product.id)"></a>
+                    </div>
+                </div>
+            </div>
+        </mat-card>
+    </div>
+    <div *ngIf="soldout.length == 0">
+        <p>No tiene productos agotados en su carrito.</p>
+    </div>
+</div>
+<app-footer></app-footer>

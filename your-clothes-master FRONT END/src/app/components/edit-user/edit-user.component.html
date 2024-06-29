@@ -1,0 +1,92 @@
+<body>
+    <app-global-navbar></app-global-navbar>
+    <div class="cardup">
+        <mat-card class="card">
+            <mat-card-title>Editar perfil</mat-card-title>
+            <mat-card-content style="color: #f5e2d0;">
+                <form [formGroup]="myForm" autocomplete="off" color="secondary">
+                    
+                    <mat-form-field appearance="legacy">
+                        <mat-label>Name</mat-label>
+                        <input matInput formControlName="name" placeholder="Name" color="secondary" maxlength="20">
+                    </mat-form-field>
+                    <div *ngIf="myForm.get('name')?.errors && myForm.get('name')?.touched">
+                      <span style="color:red">
+                        <ng-container *ngIf="myForm.get('name')?.hasError('required')">El campo es obligatorio</ng-container>
+                        <ng-container *ngIf="myForm.get('name')?.hasError('maxlength')">Supero limite de cantidad de palabras, disminuya</ng-container>
+                        <ng-container *ngIf="myForm.get('name')?.hasError('pattern')">Solo palabras</ng-container>
+                      </span>
+                    </div>
+
+                    <mat-form-field appearance="legacy">
+                        <mat-label>Apellido</mat-label>
+                        <input matInput formControlName="lastname" placeholder="Apellido" maxlength="20">
+                    </mat-form-field> <br> 
+                    <div *ngIf="myForm.get('lastname')?.errors && myForm.get('lastname')?.touched">
+                      <span style="color:red">
+                        <ng-container *ngIf="myForm.get('lastname')?.hasError('required')">El campo es obligatorio</ng-container>
+                        <ng-container *ngIf="myForm.get('lastname')?.hasError('maxlength')">Supero limite de cantidad de palabras, disminuya</ng-container>
+                        <ng-container *ngIf="myForm.get('lastname')?.hasError('pattern')">Solo palabras</ng-container>
+                      </span>
+                    </div>
+                     
+                    <mat-form-field appearance="legacy">
+                        <mat-label>Email</mat-label>
+                        <input matInput formControlName="email" placeholder="Email">
+                    </mat-form-field> <br>
+                    <div *ngIf="myForm.get('email')?.errors && myForm.get('email')?.touched">
+                      <span style="color:red">
+                        <ng-container *ngIf="myForm.get('email')?.hasError('required')">El campo es obligatorio</ng-container>
+                        <ng-container *ngIf="myForm.get('email')?.hasError('email')">Completar correctamente el email</ng-container>
+                      </span>
+                    </div>
+
+                    <mat-form-field appearance="legacy">
+                        <mat-label>DNI</mat-label>
+                        <input matInput formControlName="dni" placeholder="DNI" maxlength="8" minlength="8">
+                    </mat-form-field> <br>
+                    <div *ngIf="myForm.get('dni')?.errors && myForm.get('dni')?.touched">
+                      <span style="color:red">
+                        <ng-container *ngIf="myForm.get('dni')?.hasError('required')">El campo es obligatorio</ng-container>
+                        <ng-container *ngIf="myForm.get('dni')?.hasError('maxlength')">Supero limite de cantidad de numeros, disminuya</ng-container>
+                        <ng-container *ngIf="myForm.get('dni')?.hasError('minlength')">Campo incompleto</ng-container>
+                        <ng-container *ngIf="myForm.get('dni')?.hasError('pattern')">Solo numeros</ng-container>
+                      </span>
+                    </div>
+
+                    <mat-form-field appearance="legacy">
+                        <mat-label>Teléfono</mat-label>
+                        <input matInput formControlName="phone"   placeholder="Teléfono">
+                    </mat-form-field> <br>
+                    <div *ngIf="myForm.get('phone')?.errors && myForm.get('phone')?.touched">
+                      <span style="color:red">
+                        <ng-container *ngIf="myForm.get('phone')?.hasError('required')">El campo es obligatorio</ng-container>
+                        <ng-container *ngIf="myForm.get('phone')?.hasError('maxlength')">Supero limite de cantidad de numeros, disminuya</ng-container>
+                        <ng-container *ngIf="myForm.get('phone')?.hasError('minlength')">Campo incompleto</ng-container>
+                        <ng-container *ngIf="myForm.get('phone')?.hasError('pattern')">Solo numeros</ng-container>
+                      </span>
+                    </div>
+                    
+                    <mat-form-field appearance="legacy">
+                        <mat-label>Dirección</mat-label>
+                        <input matInput formControlName="adress" placeholder="Dirección" maxlength="50">
+                    </mat-form-field> <br>
+                    <div *ngIf="myForm.get('adress')?.errors && myForm.get('adress')?.touched">
+                      <span style="color:red">
+                        <ng-container *ngIf="myForm.get('adress')?.hasError('required')">El campo es obligatorio</ng-container>
+                        <ng-container *ngIf="myForm.get('adress')?.hasError('maxlength')">Supero limite de cantidad de numeros, disminuya</ng-container>
+                        <ng-container *ngIf="myForm.get('adress')?.hasError('pattern')">Implemente lo necesario para su lugar</ng-container>
+                      </span>
+                    </div>
+                    
+                </form>
+            </mat-card-content>
+
+            <mat-card-actions>
+                <button mat-raised-button style="background-color: var(--wall); color: var(--principal); font-weight: bold;" (click)="editUser()" >Guardar cambios</button>
+                    <button  mat-raised-button style="background-color: var(--wall); color: var(--principal); font-weight: bold;" routerLink="/user/{{id}}"> Cancelar</button>
+                
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</body>

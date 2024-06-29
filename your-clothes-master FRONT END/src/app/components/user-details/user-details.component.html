@@ -1,0 +1,44 @@
+<app-global-navbar [userID]="id"></app-global-navbar>
+
+<div class="body">
+  <div class="heading">
+    <div class="up" *ngIf="user">
+        <h1>{{user.name}}<mat-hint> {{user.lastname}}</mat-hint></h1> 
+        <div class="actions">
+          <button mat-raised-button style="background-color: var(--wall); color: var(--principallight); font-weight: bold" routerLink="/edit/{{user.id}}" >Editar perfil</button>
+          <button mat-raised-button style="background-color: var(--wall); color: var(--principallight); font-weight: bold"  (click)="openDialog()">Eliminar cuenta</button>
+        </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="row">
+      <div class="img">
+        <img src="./assets/images/Eduardo-Yañez-Mezcalent-1200_q5wvaa.jpg" alt=""> 
+      </div>
+      <div class="details">
+        <div class="title">
+          <h1>Detalles de usuario</h1>
+          <div class="linea"></div>
+        </div>
+        <div class="things">
+          <div class="data" *ngIf="user">
+            <h3 *ngIf="user.name">Nombre completo: <span>{{user.name}} {{user.lastname}}</span></h3>
+            <h3 *ngIf="user.email">Email: <span> {{user.email}}</span></h3>
+            <h3 *ngIf="user.phone">Teléfono: <span> {{user.phone}}</span></h3>
+            <h3 *ngIf="user.adress">Dirección: <span>{{user.adress}}</span></h3>
+            <h3 *ngIf="user.dni">DNI: <span>{{user.dni}}</span></h3>
+            <h3 *ngIf="!user.name">Nombre completo: <span>Dato no encontrado</span></h3>
+            <h3 *ngIf="!user.email">Email: <span>Dato no encontrado</span></h3>
+            <h3 *ngIf="!user.phone">Teléfono: <span>Dato no encontrado</span></h3>
+            <h3 *ngIf="!user.adress">Dirección: <span>Dato no encontrado</span></h3>
+            <h3 *ngIf="!user.dni">DNI: <span>Dato no encontrado</span></h3>
+          </div>
+          <div class="store">
+            <app-shop *ngIf="user" [UseriD]="user.id"></app-shop>
+          </div>
+        </div>
+      <div>
+    </div>
+  </div>
+</div>
+

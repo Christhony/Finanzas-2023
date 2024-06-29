@@ -1,0 +1,67 @@
+body{
+    margin:0%;
+}
+.row{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+}
+.row .right{
+    background: url(/assets/images/DohlKDaX4AAcdpL.jpg), center;
+    background-size: cover;
+}
+.container{
+    margin-top: 4rem;
+    margin-left: 3rem;
+}
+.container h1{
+    color: var(--principal);
+    font-size: 20px;
+    margin-left: 2rem;
+    margin-top: 1rem;
+    font-family: var(--poppinsfont);
+}
+.container form{
+    margin-left: 3rem;
+}
+form mat-form-field{
+    margin-top: 1px;
+    width: 28rem;
+    font-size: medium;
+}
+
+button{
+    margin-left: 3rem;
+    margin-top: 2rem;
+    padding-right: 12.5rem;
+    padding-left: 12.5rem;
+}
+.container p{
+    margin-top: 3rem;
+    margin-left: 3rem;
+}
+.container p a{
+    text-decoration: none;
+    color: var(--principal);
+    font-weight: bold;
+}
+
+::ng-deep .mat-focused .mat-form-field-label {
+    /*change color of label*/
+    color: var(--principallight) !important;
+}
+::ng-deep .mat-form-field-label {
+    /*change color of label*/
+    color: var(--principallight) !important;
+} 
+::ng-deep.mat-form-field-underline {
+    /*change color of underline*/
+    background-color: var(--principallight) !important;
+} 
+::ng-deep.mat-form-field-ripple {
+   /*change color of underline when focused*/
+   background-color: var(--principallight) !important;
+}
+::ng-deep .mat-input-element::placeholder{
+    color: var(--principallight) !important;
+}

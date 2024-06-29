@@ -1,0 +1,14 @@
+<p>upload-image works!</p>
+
+<div class="upload">
+    <div class="inputfile">
+        <input (change)="capturefile($event)" type="file" class="input-file">
+    </div>
+    <div class="action">
+        <button (click)="saveImage()">Subir Imagen</button>
+    </div>
+    <div *ngIf="preview" class="preview">
+        <img [src]="preview" alt="">
+    </div>
+</div>
+

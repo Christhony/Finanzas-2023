@@ -1,0 +1,33 @@
+section{
+    padding: 1rem 2%;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+}
+header h1{
+    margin-left: 2rem;
+    margin-top: 2rem;
+    margin-right: 10rem;
+    color: var(--principal);
+    font-weight: bold;
+}
+header h1 span{
+    color: var(--principallight);
+}
+header nav{
+    margin-top: 2.5rem;
+    margin-right: 2rem;
+    font-size: medium;
+}
+header nav a{
+    margin-left: 2rem;
+    text-decoration: none;
+    color: var(--sub);
+}
+
+header a:hover{
+    color: var(--sub);
+    font-weight: bold;
+    cursor:pointer;
+}

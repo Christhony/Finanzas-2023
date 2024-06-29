@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+
+:root{
+    --poppinsfont: 'Poppins', sans-serif;
+    --principal: #002a29;
+    --principallight: #007a79;
+    --superlight: #c7cedf;
+    --wall: #eff2d8;
+    --sub: #4d2a16;
+
+
+}
+html, body { height: 100%; background-color:white;}
+body { margin: 0; font-family: sans-serif; }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -1,0 +1,24 @@
+
+mat-toolbar{
+    color: var(--wall);
+    background-color: var(--principal);
+    font-weight: bold;
+    height: 4.5rem;
+    justify-content: space-between;
+}
+mat-toolbar h1{
+    margin-left: 3rem;
+    cursor: pointer;
+}
+mat-toolbar span{
+    color: var(--wall);
+}
+mat-toolbar a{
+    color: var(--wall);
+    font-size: 15px;
+    margin-right: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: 0.5rem ;
+}

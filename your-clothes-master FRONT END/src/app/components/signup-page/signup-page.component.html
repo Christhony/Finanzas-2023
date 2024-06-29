@@ -1,0 +1,88 @@
+<body>
+    <div class="row">
+        <div class="left">
+            <app-navbar-logsign></app-navbar-logsign>
+            <div class="container">
+                <h1>Registrarse</h1>
+            
+                <form [formGroup]="myForm" autocomplete="off">  
+                    <mat-form-field appearance="legacy">
+                        <mat-label>Nombre</mat-label>
+                        <input matInput formControlName="name" placeholder="Nombre">
+                    </mat-form-field> <br>
+
+                      <div *ngIf="myForm.get('name')?.hasError('required') && myForm.get('name')?.touched">
+                        <span style="color:red"> Este campo es obligatorio</span>
+                     </div>
+                     
+                     <div
+                     *ngIf="myForm.get('name')?.hasError('maxlength') ||myForm.get('name')?.hasError('pattern')"
+                     >
+                       <span class="mda-form-msg" style="color:red"> * Este campo tiene como máximo 20 caracteres y no debe tener caracteres especiales ni numeros </span>
+                     </div>
+
+
+                    <mat-form-field appearance="legacy">
+                        <mat-label>Apellido</mat-label>
+                        <input matInput formControlName="lastname" placeholder="Apellido" [ngClass]="{
+                            'is-invalid':f('lastname')?.invalid,
+                            'is-valid': f('lastname')?.valid
+                          }">
+                    </mat-form-field> <br>
+                    <div *ngIf="myForm.get('lastname')?.hasError('required') && myForm.get('lastname')?.touched">
+                        <span style="color:red"> Este campo es obligatorio</span>
+                     </div>
+                     <div
+                     *ngIf="myForm.get('lastname')?.hasError('maxlength')||myForm.get('lastname')?.hasError('pattern')"
+                     >
+                       <span class="mda-form-msg" style="color:red"> * Este campo tiene como máximo 20 caracteres y no debe tener caracteres especiales ni numeros </span>
+                     </div>
+
+
+                    <mat-form-field appearance="legacy">
+                        <mat-label>Email</mat-label>
+                        <input matInput formControlName="email" placeholder="Email" [ngClass]="{
+                            'is-invalid':f('email')?.invalid,
+                            'is-valid': f('email')?.valid
+                          }">
+                    </mat-form-field> <br>
+                    <div *ngIf="myForm.get('email')?.hasError('required') && myForm.get('email')?.touched">
+                        <span style="color:red"> Este campo es obligatorio</span>
+                     </div>
+
+                     <div
+                     *ngIf="myForm.get('email')?.hasError('email')"
+                     >
+                       <span class="mda-form-msg" style="color:red"> * Este campo debe estar en formato de correo electronico y máximo 20 caracteres </span>
+                     </div>
+
+
+                    <mat-form-field appearance="legacy">
+                        <mat-label>Contraseña</mat-label>
+                        <input matInput type="password" formControlName="password" placeholder="Contraseña" maxlength="8"  [ngClass]="{
+                            'is-invalid':f('password')?.invalid,
+                            'is-valid': f('password')?.valid
+                          }">
+                    </mat-form-field> <br>
+
+                    <div *ngIf="myForm.get('password')?.hasError('required') && myForm.get('password')?.touched">
+                        <span style="color:red"> Este campo es obligatorio</span>
+                     </div>
+
+                     <div *ngIf="myForm.get('password')?.hasError('minlength')"
+                     >
+                       <span style="color:red"> * Este campo como minimo debe tener 5 caracteres </span>
+                     </div>
+                     <div *ngIf="myForm.get('password')?.hasError('maxlength')"
+                     >
+                       <span style="color:red"> * Este campo como maximo tiene 8 caracteres </span>
+                     </div>
+
+                </form>
+            
+                <button mat-raised-button style="background-color: var(--principal); color: var(--wall);" (click)="saveUser()">Crear cuenta</button>
+            </div>
+        </div>
+        <div class="right"></div>
+    </div>
+</body>
